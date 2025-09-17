@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Best of Luck — Result Day 🎉</title>
+  <style>
+    :root{
+      --bg: linear-gradient(135deg,#fef3c7 0%, #ffd6e0 50%, #c7f9ff 100%);
+      --card:#ffffffaa;
+      --accent:#ff6b81;
+      --muted:#6b7280;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      background:var(--bg);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+
+    .stage{
+      width:100%;
+      max-width:960px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.75));
+      border-radius:18px;
+      box-shadow:0 10px 30px rgba(15,23,42,0.12);
+      overflow:hidden;
+      position:relative;
+      padding:28px;
+    }
+
+    header{display:flex;gap:16px;align-items:center}
+    .logo{
+      width:74px;height:74px;border-radius:14px;display:grid;place-items:center;font-weight:700;font-size:20px;color:white;background:linear-gradient(45deg,#ff8fab,#ffcd6b);
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    h1{margin:0;font-size:34px;line-height:1.02;color:#0f172a}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+
+    main{display:grid;grid-template-columns:1fr 360px;gap:20px;margin-top:20px}
+
+    .panel{
+      background:var(--card);
+      padding:18px;border-radius:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.6);
+    }
+
+    .big-wish{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+    .wish-title{font-size:28px;color:#0f172a;margin:0}
+    .wish-sub{color:#334155;margin:0}
+
+    .special{
+      background:linear-gradient(90deg,#fff3f7,#fff9ec);padding:14px;border-radius:10px;border:1px solid rgba(0,0,0,0.03);
+    }
+
+    .name-badge{
+      display:inline-block;padding:8px 12px;border-radius:999px;font-weight:700;background:linear-gradient(90deg,#ffd6e0,#ffecb3);box-shadow:0 6px 14px rgba(255,107,129,0.12);
+    }
+
+    .note{color:#374151;margin-top:8px}
+
+    .actions{display:flex;gap:10px;margin-top:12px}
+    button{cursor:pointer;padding:10px 14px;border-radius:10px;border:0;font-weight:600}
+    .btn-primary{background:linear-gradient(90deg,#7c3aed,#06b6d4);color:white}
+    .btn-ghost{background:transparent;border:1px solid rgba(15,23,42,0.06);color:#0f172a}
+
+    /* right column */
+    .side{
+      display:flex;flex-direction:column;gap:12px;align-items:stretch;
+    }
+
+    .confetti-btn{font-size:14px}
+
+    /* balloons */
+    .balloons{position:absolute;left:12px;top:-20px;pointer-events:none}
+    .balloon{width:40px;height:60px;border-radius:50% 50% 50% 50%;position:relative;transform-origin:center bottom}
+    .string{position:absolute;height:60px;width:2px;background:rgba(0,0,0,0.08);left:50%;transform:translateX(-50%);bottom:-56px}
+    .b1{background:radial-gradient(circle at 30% 30%, #fff 8%, #ff7aa2 10%, #ff6b81 50%);left:18px}
+    .b2{background:radial-gradient(circle at 30% 30%, #fff 8%, #ffd88c 10%, #ffb86b 50%);left:72px}
+    .b3{background:radial-gradient(circle at 30% 30%, #fff 8%, #b7f0ff 10%, #6bd6ff 50%);left:140px}
+
+    @keyframes floaty{0%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-18px) rotate(6deg)}100%{transform:translateY(0) rotate(-6deg)}}
+    .balloon{animation:floaty 3s ease-in-out infinite}
+
+    /* responsive */
+    @media (max-width:880px){main{grid-template-columns:1fr} .balloons{display:none}}
+
+    footer{margin-top:14px;color:#475569;font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="stage" id="stage">
+    <div class="balloons" aria-hidden="true">
+      <div class="balloon b1" style="position: absolute; top: 6px; left: 20px; transform: scale(1.1); animation: 3.20196s ease-in-out 0s infinite normal none running floaty;"><div class="string"></div></div>
+      <div class="balloon b2" style="position: absolute; top: 24px; left: 86px; transform: scale(1.05); animation: 3.23635s ease-in-out 0s infinite normal none running floaty;"><div class="string"></div></div>
+      <div class="balloon b3" style="position: absolute; top: 10px; left: 150px; transform: scale(1.15); animation: 3.16561s ease-in-out 0s infinite normal none running floaty;"><div class="string"></div></div>
+    </div>
+
+    <header>
+      <div class="logo">🎓</div>
+      <div>
+        <h1>Best of Luck — Result Day 🎉</h1>
+        <p class="lead">Sending warm wishes to everyone waiting for their results. Share this with your friends!</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="panel">
+        <div class="big-wish">
+          <div>
+            <h2 class="wish-title">Good Luck Everyone!</h2>
+            <p class="wish-sub">May your hard work shine — breathe, believe, and receive.</p>
+          </div>
+
+          <div class="special" style="margin-top:14px">
+            <div>
+              <div>For <span class="name-badge" id="userName">Maryam</span></div>
+              <p class="note">Dear <strong id="userName2">Maryam</strong> — may your results bring you the success you worked for. Whatever happens, I believe in you. 🌟</p>
+            </div>
+            <div class="actions">
+              <button class="btn-primary" id="celebrateBtn">Celebrate 🎊</button>
+              <button class="btn-ghost" id="copyHtml">Copy full HTML</button>
+            </div>
+          </div>
+
+          <p class="note">Tip: Save this file as <code>result-day.html</code> and open it in any browser. You can share the file or upload it to a simple host (GitHub Pages, Netlify, etc.).</p>
+        </div>
+      </section>
+
+      <aside class="side">
+        <div class="panel">
+          <h3 style="margin:0 0 6px 0">For your friends</h3>
+          <p style="margin:0">A little message everyone can use when they open this page:</p>
+          <blockquote style="margin-top:8px;padding:12px;background:#fff;border-radius:8px;border-left:4px solid #fde68a">Good luck! Celebrate your effort today — results are only one step in your journey.</blockquote>
+          <div style="margin-top:10px;display:flex;gap:8px;">
+            <button class="btn-ghost confetti-btn" id="confettiToggle">Fire Confetti</button>
+            <button class="btn-ghost" id="downloadBtn">Download HTML</button>
+          </div>
+        </div>
+
+        <div class="panel" style="text-align:center">
+          <strong>Share</strong>
+          <p style="margin:8px 0 0 0">Share the file directly or upload to any static host.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>Made with ❤️ — Open this file in your browser and click "Celebrate" to trigger animations.</footer>
+
+    <!-- Confetti canvas -->
+    <canvas id="confettiCanvas" style="position:absolute;inset:0;pointer-events:none" width="1280" height="593"></canvas>
+  </div>
+
+  <script>
+    // Small confetti implementation (no external libs)
+    const canvas = document.getElementById('confettiCanvas');
+    const ctx = canvas.getContext('2d');
+    let W = canvas.width = innerWidth;
+    let H = canvas.height = innerHeight;
+    const pieces = [];
+
+    function rand(min,max){return Math.random()*(max-min)+min}
+
+    class Piece{
+      constructor(x,y){
+        this.x=x;this.y=y;this.w=rand(6,12);this.h=rand(8,16);this.vx=rand(-4,4);this.vy=rand(-8,-3);this.rot=rand(0,360);this.vr=rand(-8,8);
+        const palettes = [[255,107,129],[255,206,84],[107,189,255],[169,105,255],[118,255,196]];
+        this.color = palettes[Math.floor(rand(0,palettes.length))];
+      }
+      update(){
+        this.vy += 0.25; this.vx*=0.99; this.x+=this.vx; this.y+=this.vy; this.rot+=this.vr;
+      }
+      draw(){
+        ctx.save(); ctx.translate(this.x,this.y); ctx.rotate(this.rot*Math.PI/180);
+        ctx.fillStyle = `rgba(${this.color.join(',')},1)`;
+        ctx.fillRect(-this.w/2,-this.h/2,this.w,this.h);
+        ctx.restore();
+      }
+    }
+
+    function popConfetti(x,y,count=40){
+      for(let i=0;i<count;i++) pieces.push(new Piece(x + rand(-20,20), y + rand(-10,10)));
+    }
+
+    function tick(){
+      ctx.clearRect(0,0,W,H);
+      for(let i=pieces.length-1;i>=0;i--){
+        const p=pieces[i]; p.update(); p.draw();
+        if(p.y>H+50||p.x<-50||p.x>W+50) pieces.splice(i,1);
+      }
+      requestAnimationFrame(tick);
+    }
+    tick();
+
+    window.addEventListener('resize', ()=>{W=canvas.width=innerWidth; H=canvas.height=innerHeight});
+
+    // Buttons
+    document.getElementById('celebrateBtn').addEventListener('click', ()=>{
+      const rect = document.getElementById('stage').getBoundingClientRect();
+      popConfetti(rect.left + rect.width/2, rect.top + 80, 120);
+      // small balloon wiggle
+      document.querySelectorAll('.balloon').forEach((b,i)=>{ b.style.animation = `floaty ${2.6+Math.random()}s ease-in-out infinite`; });
+    });
+
+    document.getElementById('confettiToggle').addEventListener('click', ()=>{
+      popConfetti(innerWidth/2, innerHeight/3, 220);
+    });
+
+    // Copy full HTML to clipboard so user can easily save & share
+    document.getElementById('copyHtml').addEventListener('click', async ()=>{
+      try{
+        await navigator.clipboard.writeText('<!doctype html>\n'+document.documentElement.outerHTML);
+        alert('Full page HTML copied to clipboard. Paste into a file and save as result-day.html');
+      }catch(e){
+        alert('Copy failed — your browser may block clipboard. Use the Download button instead.');
+      }
+    });
+
+    // Download HTML
+    document.getElementById('downloadBtn').addEventListener('click', ()=>{
+      const blob = new Blob(['<!doctype html>\n'+document.documentElement.outerHTML], {type:'text/html'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href=url; a.download='result-day.html'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+    });
+
+    // Set user name from internal data (you can edit this value)
+    const userName = 'Maryam';
+    document.getElementById('userName').textContent = userName;
+    document.getElementById('userName2').textContent = userName;
+  </script>
+
+</body></html>
