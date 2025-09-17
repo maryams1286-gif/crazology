@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Best of Luck — From Maryam 🎉</title>
+  <style>
+    body{
+      margin:0;
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      background:linear-gradient(135deg,#fef3c7 0%, #ffd6e0 50%, #c7f9ff 100%);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      height:100vh;
+      text-align:center;
+    }
+    .card{
+      background:rgba(255,255,255,0.9);
+      padding:40px;
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.1);
+      max-width:650px;
+    }
+    h1{
+      font-size:40px;
+      margin:0 0 20px;
+      color:#0f172a;
+    }
+    p{
+      font-size:20px;
+      color:#374151;
+      margin:10px 0;
+    }
+    .from{
+      margin-top:20px;
+      font-weight:bold;
+      font-size:18px;
+      color:#6b21a8;
+    }
+    .quote{
+      margin-top:25px;
+      font-size:18px;
+      font-style:italic;
+      color:#1f2937;
+    }
+    .dua{
+      margin-top:20px;
+      font-size:18px;
+      color:#065f46;
+      font-weight:bold;
+    }
+    /* Balloons */
+    .balloon{
+      width:60px;height:80px;border-radius:50%;position:absolute;
+      animation:floaty 6s ease-in-out infinite;
+    }
+    .balloon:after{
+      content:"";position:absolute;bottom:-40px;left:50%;width:2px;height:40px;background:rgba(0,0,0,0.2);
+    }
+    .b1{background:#ff6b81;left:20%;top:20%}
+    .b2{background:#ffb86b;left:50%;top:10%;animation-delay:2s}
+    .b3{background:#6bd6ff;left:75%;top:25%;animation-delay:4s}
+
+    @keyframes floaty{
+      0%{transform:translateY(0)}
+      50%{transform:translateY(-30px)}
+      100%{transform:translateY(0)}
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <br/>
+  <div class="balloon b1"></div>
+  <div class="balloon b2"></div>
+  <div class="balloon b3"></div>
+    <h1>Best of Luck Crazology! 🎓🎉</h1>
+    <p>May your hard work shine bright and bring success in your results also me.</p>
+    <div class="quote">“Even if your result doesn’t come out as expected, don’t hate yourself — it’s just a page in your story, not the whole book.”</div>
+    <div class="dua">May Allah turns your all, InshaAllah, to Alhamdulillah. 🤲</div>
+    <div class="from">— From Maryam For Second Year Students.🌸</div>
+  </div>
+
+
+ <!-- Confetti Button -->
+<div style="margin-top:30px;">
+  <button onclick="fireConfetti()" 
+    style="padding:8px 16px;font-size:18px;
+           border:none;border-radius:10px;
+           background:#ef4444;color:white;
+           cursor:pointer;">
+    🎉 Celebrate 🎉
+  </button>
+</div>
+
+<!-- Confetti Library -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<!-- Confetti Function -->
+<script>
+  function fireConfetti() {
+    var duration = 2 * 1000; // 2 seconds
+    var end = Date.now() + duration;
+
+    (function frame() {
+      confetti({
+        particleCount: 7,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0 }
+      });
+      confetti({
+        particleCount: 7,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1 }
+      });
+
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    })();
+  }
+</script>
+
+
+</body>
+</html>
